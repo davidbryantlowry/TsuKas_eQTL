@@ -1,3 +1,9 @@
+#Author: David Lowry
+
+#This R script runs the additive model only for eQTL mapping
+
+
+
 library(qtl)
 data <- read.cross("csv", ".", "rQTL_May_SNP_dry_5_4_12.csv")
 class(data)[1]="riself"
@@ -19,8 +25,6 @@ transcriptLOD4=scanone(dataIM, pheno.col=15001:20000, addcov=x, model=c("normal"
 transcriptLOD5=scanone(dataIM, pheno.col=20001:25662, addcov=x, model=c("normal"), method=c("hk"))
 transcriptLODall=cbind(transcriptLOD1, transcriptLOD2, transcriptLOD3, transcriptLOD4, transcriptLOD5)
 
-########to run 1000 permutations on each trait keeping expression matrix constant - not sure which size of transcripts will run best - we may need to 
-###play to see how difficult this is computationally######
 
 set.seed(123456)
 maxlod1=scanone(dataIM, pheno.col=1:5000, model=c("normal"), method=c("hk"), n.perm=1000, addcov=x)
