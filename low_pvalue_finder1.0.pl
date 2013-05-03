@@ -28,7 +28,6 @@ for (my $x=1; $x < (($counter1/6)+1); ++$x){
 	print"$pval_array[0][($x*6)-1]\,";
 	my @ranker = ("$pval_array[1][($x*6)-1]", "$pval_array[2][($x*6)-1]", "$pval_array[3][($x*6)-1]", "$pval_array[4][($x*6)-1]", "$pval_array[5][($x*6)-1]");
 	@ranker = sort @ranker;
-	#  print "$pval_array[0][($x*6)-1]\t";
 	print "$ranker[0]\n";
 }
 
