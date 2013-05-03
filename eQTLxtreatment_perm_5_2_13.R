@@ -4,7 +4,7 @@
 #them to identify eQTLxtreatment interactions. Based on section 7.2
 # of "A guide to QTL mapping with R/qtl" by Broman and Sen.
 
-#load r/QTL
+#load R/qtl
 library(qtl)
 
 #Load modules that allow for parallization across 
