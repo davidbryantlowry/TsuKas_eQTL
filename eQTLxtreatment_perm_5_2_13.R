@@ -22,6 +22,8 @@ data<-jittermap(data)
 
 #Load data file with covariates
 cyto_block<-read.csv(file="block_cyto_treatment.csv", header=TRUE)
+
+#Extract covariates
 block1<-as.vector(cyto_block$block1)
 block2<-as.vector(cyto_block$block2)
 block3<-as.vector(cyto_block$block3)
