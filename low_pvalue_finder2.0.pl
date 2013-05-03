@@ -17,7 +17,7 @@ my $counter1;
 my $file = $ARGV[0];
 open(PVAL, $file) or die;
 
-#Read lines of genotype file into an array
+#Read lines of R/qtl file into an array of arrays
 while (<PVAL>){
 	@pval_rows = split('\s');
 	$counter1 = scalar @pval_rows;
