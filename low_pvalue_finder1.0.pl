@@ -16,14 +16,13 @@ my $counter1;
 my $file = $ARGV[0];
 open(PVAL, $file) or die;
 
-#Read lines of genotype file into an array
+#Read lines of R/qtl file into an array
 while (<PVAL>){
 	@pval_rows = split(' ');
 	$counter1 = scalar @pval_rows;
 	push(@pval_array, [@pval_rows]);
 	}
-	
-#print "$pval_array[5][5]\n";
+
 
 for (my $x=1; $x < (($counter1/6)+1); ++$x){
 	print"$pval_array[0][($x*6)-1]\,";
