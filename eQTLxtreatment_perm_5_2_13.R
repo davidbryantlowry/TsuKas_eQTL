@@ -44,7 +44,7 @@ dataIM<-calc.genoprob(data, step=1, map.function="kosambi")
 #Fit additive model
 out.a=scanone(dataIM, pheno.col=1:2500, addcov=x, model=c("normal"), method=c("hk"))
 
-#Fit interactive model
+#Fit full interactive model
 out.u=scanone(dataIM, pheno.col=1:2500, addcov=x, intcovar=treatment, model=c("normal"), method=c("hk"))
 
 #Set seed for permutaitons
