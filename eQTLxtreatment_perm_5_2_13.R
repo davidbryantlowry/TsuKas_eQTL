@@ -55,7 +55,7 @@ operm.a <- scanone(dataIM, pheno.col=1:2500, addcov=x, model=c("normal"), method
 
 set.seed(54955149)
 
-#Permutations for the interactive model
+#Permutations for the full model
 operm.u <- scanone(dataIM, pheno.col=1:2500, addcov=x, intcovar=treatment, model=c("normal"), method=c("hk"), n.perm=1000, n.cluster=6)
 
 #Compare LOD profiles across models
