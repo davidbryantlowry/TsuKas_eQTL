@@ -5,7 +5,7 @@
 
 
 library(qtl)
-data <- read.cross("csv", ".", "rQTL_May_SNP_dry_5_4_12.csv")
+data <- read.cross("csv", ".", "rQTL_May_SNP_sum_5_13_13.csv")
 class(data)[1]="riself"
 data<-jittermap(data)
 cyto_block<-read.csv(file="block_cyto.csv", header=TRUE)
