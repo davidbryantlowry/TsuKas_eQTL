@@ -31,21 +31,21 @@ maxlod1=scanone(dataIM, pheno.col=1:5000, model=c("normal"), method=c("hk"), n.p
 
 tabbycol_5000<-summary(transcriptLOD1, format="tabByCol", pvalues=TRUE, perm=maxlod1, ci.function="lodint")
 
-write.table(tabbycol_5000, file = "Tab_by_5000_Mckay_dry_SNP.txt", quote=FALSE, row.name=FALSE)
+write.table(tabbycol_5000, file = "Tab_by_5000_Mckay_sum_SNP.txt", quote=FALSE, row.name=FALSE)
 
 set.seed(123456)
 maxlod2=scanone(dataIM, pheno.col=5001:10000, model=c("normal"), method=c("hk"), n.perm=1000, addcov=x)
 
 tabbycol_10000<-summary(transcriptLOD2, format="tabByCol", pvalues=TRUE, perm=maxlod2, ci.function="lodint")
 
-write.table(tabbycol_10000, file = "Tab_by_10000_Mckay_dry_SNP.txt", quote=FALSE, row.name=FALSE)
+write.table(tabbycol_10000, file = "Tab_by_10000_Mckay_sum_SNP.txt", quote=FALSE, row.name=FALSE)
 
 set.seed(123456)
 maxlod3=scanone(dataIM, pheno.col=10001:15000, model=c("normal"), method=c("hk"), n.perm=1000, addcov=x)
 
 tabbycol_15000<-summary(transcriptLOD3, format="tabByCol", pvalues=TRUE, perm=maxlod3, ci.function="lodint")
 
-write.table(tabbycol_15000, file = "Tab_by_15000_Mckay_dry_SNP.txt", quote=FALSE, row.name=FALSE)
+write.table(tabbycol_15000, file = "Tab_by_15000_Mckay_sum_SNP.txt", quote=FALSE, row.name=FALSE)
 
 
 set.seed(123456)
@@ -53,11 +53,11 @@ maxlod4=scanone(dataIM, pheno.col=15001:20000, model=c("normal"), method=c("hk")
 
 tabbycol_20000<-summary(transcriptLOD4, format="tabByCol", pvalues=TRUE, perm=maxlod4, ci.function="lodint")
 
-write.table(tabbycol_20000, file = "Tab_by_20000_Mckay_dry_SNP.txt", quote=FALSE, row.name=FALSE)
+write.table(tabbycol_20000, file = "Tab_by_20000_Mckay_sum_SNP.txt", quote=FALSE, row.name=FALSE)
 
 set.seed(123456)
 maxlod5=scanone(dataIM, pheno.col=20001:25662, model=c("normal"), method=c("hk"), n.perm=1000, addcov=x)
 
 tabbycol_25662<-summary(transcriptLOD5, format="tabByCol", pvalues=TRUE, perm=maxlod5, ci.function="lodint")
 
-write.table(tabbycol_24756, file = "Tab_by_25662_Mckay_dry_SNP.txt", quote=FALSE,       row.name=FALSE)
+write.table(tabbycol_24756, file = "Tab_by_25662_Mckay_sum_SNP.txt", quote=FALSE,       row.name=FALSE)
