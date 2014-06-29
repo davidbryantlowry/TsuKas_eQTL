@@ -1,0 +1,15 @@
+R script for making cis_trans plot
+
+> postscript("cis_trans_plot7.ps")
+> par(mai=c(1,2.8,1,2.8))
+> plot(split_cis_trans$mean$QTL_Position, split_cis_trans$mean$Gene_Location, xlab="", ylab="", cex=1.3, col="blue", cex.axis=1.8)
+> points(split_cis_trans$difference$QTL_Position, split_cis_trans$difference$Gene_Location, cex=1.3, col="red", pch=15, cex.axis=1.8)
+> abline(h=114.232,lwd=2)
+> abline(v=193.108,lwd=2)
+> abline(h=193.108,lwd=2)
+> abline(h=297.482,lwd=2)
+> abline(h=372.926,lwd=2)
+> abline(v=114.232,lwd=2)
+> abline(v=297.482,lwd=2)
+> abline(v=372.926,lwd=2)
+> dev.off()
